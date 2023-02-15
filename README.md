@@ -1,4 +1,4 @@
-# Projeto de Sistemas Operacionais | File manager
+# Computação Paralela
 
  GIT criado para a disciplina de Computação Paralela do 5º semestre de Ciência da Computação da Universidade Presbiteriana Mackenzie.
 
