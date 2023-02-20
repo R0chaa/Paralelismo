@@ -3,7 +3,7 @@
 int EhImparPar(char *entrada);
 
 int main(){
-    int opt;
+    int opt, char teste;
     char *entrada = "aba";
 
     printf("Isso é só um teste ;)");
