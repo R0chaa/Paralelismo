@@ -6,7 +6,7 @@ int main(){
     int opt, char teste;
     char *entrada = "aba";
 
-    printf("Isso é só um teste (:");
+    printf("Isso é só um teste");
 
     do{
         printf("\nMenu: \n (1) - Teste goto\n (2) - Sair\n > ");
