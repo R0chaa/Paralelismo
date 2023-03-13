@@ -3,8 +3,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define LIN 3;
-#define COL 3;
+#define LIN 3
+#define COL 3
 
 void imprime(int matriz[LIN][COL]){
 	for(int i = 0; i < LIN; i++){
@@ -30,7 +30,12 @@ int main(){
 		}
 	}
 
+	printf("Matriz inicial:\n");
+	imprime(matriz);
+
   	substituir(matriz);
+
+	printf("\nMatriz alterada:\n");
   	imprime(matriz);
   	return 0;
 }
