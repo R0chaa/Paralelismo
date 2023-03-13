@@ -10,6 +10,7 @@ void conceito(float mediAluno){
 	else if (mediAluno >= 6 && mediAluno < 7.5) cout << "O conceito do aluno foi 'C'";
 	else if (mediAluno >= 7.5 && mediAluno < 9) cout << "O conceito do aluno foi 'B'";
 	else if (mediAluno > 9) "O conceito do aluno foi 'A'";
+	cout << "\n";
 }
 
 int main(){

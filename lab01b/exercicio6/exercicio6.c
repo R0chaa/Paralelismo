@@ -4,13 +4,13 @@
 int LIN = 3, COL = 2;
 
 int imprime(int** matriz){
-	printf("\n");
 	for(int i=0; i<LIN; i++){
 		for(int j=0; j<COL; j++){
 			printf(" %d", matriz[i][j]);
 		}
 		printf("\n");
 	}
+	printf("\n");
 }
 
 
