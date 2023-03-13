@@ -45,11 +45,11 @@ int main() {
 	printMatriz(&matriz[0][0]);
 
 	int* matrizResultado;
-	printf("\n\Apos somar L1 com L2 e salvando em L2: \n");
+	printf("\nApos somar L1 com L2 e salvando em L2: \n");
 	matrizResultado = somarL1L2(&matriz[0][0]);
 	printMatriz(matrizResultado);
 
-	printf("\n\Apos multiplicar L1 com L2 e salvando em L2: \n");
+	printf("\nApos multiplicar L1 com L2 e salvando em L2: \n");
 	matrizResultado = multL1L2(&matriz[0][0]);
 	printMatriz(matrizResultado);
 
