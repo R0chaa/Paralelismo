@@ -15,13 +15,13 @@ void imprime(int matriz[N][N]){
 	}
 }
 
-int encontraMaior(int matriz[N][N]){
-	int maior = 0, linha = 0, i, j;
+int encontraMenor(int matriz[N][N]){
+	int menor = 0, linha = 0, i, j;
 
 	for(i=0; i<N; i++){
 		for(j=0; j<N; j++){
-			if(matriz[i][j] > maior){
-				maior = matriz[i][j];
+			if(matriz[i][j] < menor){
+				menor = matriz[i][j];
 				linha = i;
 			}
 		}
@@ -40,6 +40,6 @@ int main(){
 	}
 
 	imprime(matriz);
-	printf("\n > O maior número esta localizado na linha %d\n", encontraMaior(matriz) + 1);
+	printf("\n > O menor número esta localizado na linha %d\n", encontraMenor(matriz) + 1);
 	return 0;
 }
