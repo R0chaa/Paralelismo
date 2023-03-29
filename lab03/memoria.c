@@ -20,7 +20,6 @@ int main()
      if (childpid == 0)
     {
         printf("Valor inicial: %i\n", *ipcPointer);
-        printf ("ID Filho após fork: %d\n", getpid());
         *ipcPointer += 2;
         printf("Valor após soma: %i\n", *ipcPointer);
     } 
