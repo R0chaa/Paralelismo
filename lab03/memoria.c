@@ -14,12 +14,12 @@ int main()
     
     int *ipcPointer = (int *) shmat (shmid, 0, 0);
     *ipcPointer = 1;
+    printf("Valor inicial: %i\n", *ipcPointer);
     
     childpid = fork();
     
-     if (childpid == 0)
+    if (childpid == 0)
     {
-        printf("Valor inicial: %i\n", *ipcPointer);
         *ipcPointer += 2;
         printf("Valor após soma: %i\n", *ipcPointer);
     } 
