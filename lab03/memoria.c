@@ -19,9 +19,6 @@ int main()
      if ((childpid = fork()) == 0)
     {
         printf("Valor inicial: %i\n", *ipcPointer);
-        
-        shmid = shmget (IPC_PRIVATE, sizeof (int), 0666|IPC_CREAT);
-    
         printf ("ID Filho após fork: %d\n", getpid());
         
         *ipcPointer += 2;
