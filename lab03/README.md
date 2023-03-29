@@ -10,7 +10,6 @@
 ## Saída
  
  Valor inicial: 1
- ID Filho após fork: 1198
  Valor após soma: 3
  Valor multiplicado por 4 após soma do filho: 12
 
