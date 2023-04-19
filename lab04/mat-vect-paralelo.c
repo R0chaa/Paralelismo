@@ -45,8 +45,8 @@ int main()
   int i, j;
   long tid; //id atual do thread
 
-  m = 3; //numero de linhas da matriz
-  n = 3; //numero de colunas da matriz e tamanho do vetor
+  m = 3000; //numero de linhas da matriz
+  n = 3000; //numero de colunas da matriz e tamanho do vetor
   thread_count = 2; //numero de threads
 
   //alocando matriz
@@ -80,12 +80,12 @@ int main()
   }
   
   //print
-  printf("\nMatriz A: \n");
-  printMat(A, m,n);
-  printf("\nVetor x: \n");
-  printVect(x, n);
-  printf("\nVetor resultado y: \n");
-  printVect(y, m);
+  //printf("\nMatriz A: \n");
+  //printMat(A, m,n);
+  //printf("\nVetor x: \n");
+  //printVect(x, n);
+  //printf("\nVetor resultado y: \n");
+  //printVect(y, m);
   
   //desaloca tudo
   free(threads);

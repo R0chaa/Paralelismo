@@ -11,11 +11,11 @@ http://www2.cs.uregina.ca/~hamilton/courses/330/notes/unix/pipes/pipes.html
 */
 
 int main(){
-	int num, j, pid1, pid2, pip1[2], pip2[2]; // pip1 e pip2 serão utilizados para a comunicação dos processos filhos e pid1 e pid2 para a comunicação dos processos
+	int num = 6, j, pid1, pid2, pip1[2], pip2[2]; // pip1 e pip2 serão utilizados para a comunicação dos processos filhos e pid1 e pid2 para a comunicação dos processos
     	long long int result1=1, result2=1, i; //Como a saida do fatorial se torna estupidamente grande e utilizamos i para calcular, ambos devem ser do tipo long long int
 
-   	printf("Digite um num: ");
-    	scanf("%d", &num);
+   	//printf("Digite um num: ");
+    	//scanf("%d", &num);
 
     	pipe(pip1); // Se o pipe 1 não foi criado com sucesso o programa é encerrado
     	pipe(pip2); // Se o pipe 2 não foi criado com sucesso o programa é encerrado
@@ -31,8 +31,10 @@ int main(){
         	close(pip1[0]); // Fecha o descritor de leitura de pip1
         	j = num / 2;
 
-        	for (i = 1; i <= j; i++) 
+        	for (i = 1; i <= j; i++) {
             		result1 *= i; // Calcula o fatorial pra primeira metade de "num"
+			sleep(1);
+		}
 
         	write(pip1[1], &result1, sizeof(result1));  //Escreve o resultado da primeira metade em "result1"
         	close(pip1[1]); // Fecha o descritor de escrita de pip1
@@ -50,9 +52,10 @@ int main(){
             		close(pip2[0]); // Fecha o descritor de leitura de pip2
             		j = num; 
 
-            		for (i = (num / 2) + 1; i <= j; i++) 
+            		for (i = (num / 2) + 1; i <= j; i++) { 
                 		result2 *= i; // Calcula o fatorial pra segunda metade de "num"
-            		
+            			sleep(1);
+			}
 
             		write(pip2[1], &result2, sizeof(result2)); // Escreve o resultado da segunda metade em "result2"
             		close(pip2[1]); // Fecha o descritor de escrita de pip1
