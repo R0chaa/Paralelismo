@@ -23,12 +23,12 @@ Média do tempo paralelo com 2 threads: 9.914s
 Speedup: 1.55
  ```
 
-Média do tempo paralelo com 4 threads: 0.052s
+Média do tempo paralelo com 4 threads: 10.127s
  ```
 Speedup: 1.79
  ```
 
-Média do tempo paralelo com 8 threads: 0.046s
+Média do tempo paralelo com 8 threads: 10.129s
  ```
 Speedup: 2.02
  ```
