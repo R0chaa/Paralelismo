@@ -18,7 +18,7 @@ time ./paralelo <n-de-threads>"
 
 **Média do tempo serial: 0.093s** 
 
-Média do tempo paralelo com 2 threads: 0.060s
+Média do tempo paralelo com 2 threads: 9.914s
  ```
 Speedup: 1.55
  ```
