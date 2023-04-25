@@ -14,8 +14,6 @@ Para compilar e executar o programa paralelo certifique-se que o gcc está insta
 time ./paralelo <n-de-threads>"
  ```
 
-
-
 # Comparações de Speed-up
 
 **Média do tempo serial: 0.093s** 
