@@ -16,21 +16,21 @@ time ./paralelo <n-de-threads>"
 
 # Comparações de Speed-up
 
-**Média do tempo serial: 0.093s** 
+**Média do tempo serial: 12.289s** 
 
 Média do tempo paralelo com 2 threads: 9.914s
  ```
-Speedup: 1.55
+Speedup: 1.239
  ```
 
 Média do tempo paralelo com 4 threads: 10.127s
  ```
-Speedup: 1.79
+Speedup: 1.213
  ```
 
 Média do tempo paralelo com 8 threads: 10.129s
  ```
-Speedup: 2.02
+Speedup: 1.213
  ```
  
  > Para calculo da média de tempo os respectivos algoritmos foram executados 10 vezes.
