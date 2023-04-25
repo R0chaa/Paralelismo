@@ -3,8 +3,6 @@
 #include <omp.h>
 #include <math.h>
 
-#define n 1000000000
-
 void Trap (double a, double b, int n, double* global_result_p);
 
 double f(double x);
@@ -13,6 +11,7 @@ int main(int argc, char* argv[])
 {
 	double global_result = 0.0;
 	double a = 0.0, b = 100.0;
+	int n = 1000000000;
 	int thread_count;
 
 	thread_count = strtol(argv[1], NULL, 10);
