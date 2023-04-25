@@ -11,8 +11,8 @@ int main(int argc, char* argv[]){;
 	double a = 0.0, b = 100.0;
         int n = 1000000000;
 
-        printf("Enter a, b, and n\n");
-        scanf("%lf %lf %d", &a, &b, &n);
+        //printf("Enter a, b, and n\n");
+        //scanf("%lf %lf %d", &a, &b, &n);
 
         global_result = Trap(a, b, n);
 
