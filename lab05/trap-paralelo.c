@@ -15,8 +15,8 @@ int main(int argc, char* argv[])
 	int thread_count;
 
 	thread_count = strtol(argv[1], NULL, 10);
-	printf("Enter a, b, and n\n");
-	scanf("%lf %lf %d", &a, &b, &n);
+	//printf("Enter a, b, and n\n");
+	//scanf("%lf %lf %d", &a, &b, &n);
 
 #	pragma omp parallel num_threads(thread_count)
 	Trap(a, b, n, &global_result);
