@@ -2,21 +2,16 @@
 #include <gmp.h>
 
 void euler(mpf_t result, int n) {
-    //mpf_set_ui(result, 1);
     mpf_t fact, term;
     mpf_init(fact);
     mpf_init(term);
-
     mpf_set_ui(fact, 1);
-    //mpf_set_ui(term, 0);
-
+	
     for (int i = 1; i < n; i++) {
-        //factorial(fact, i);
         mpf_mul_ui(fact, fact, i);
 	mpf_ui_div(term, 1, fact);
         mpf_add(result, result, term);
     }
-
     mpf_clear(fact);
     mpf_clear(term);
 }
