@@ -1,4 +1,4 @@
-# Lab03 - OpenMP
+# Lab05 - OpenMP
 
 ### Trapézio serial
 Para compilar e executar o programa serial certifique-se que o gcc está instalado em sua máquina e então use o comando: "gcc trap-serial.c -o serial -fopenmp -lm" e em seguida abra o arquivo executável "serial" usando:
