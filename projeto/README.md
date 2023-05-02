@@ -6,14 +6,14 @@ sudo apt-get install libgmp3-dev
 ```
 
 ### Euler serial com GMP
-Para compilar e executar o programa serial certifique-se que o gcc está instalado em sua máquina e então use o comando: "gcc -o opt-serial euler-serial.c -lgmp" e em seguida abra o arquivo executável "euler-serial" usando:
+Para compilar e executar o programa serial certifique-se que o gcc está instalado em sua máquina e então use o comando: "gcc -o opt-serial euler-serial.c -lgmp" e em seguida abra o arquivo executável "opt-serial" usando:
 
  ```
 time ./opt-serial
  ```
  
  ### Euler serial sem GMP
-Para compilar e executar o programa serial certifique-se que o gcc está instalado em sua máquina e então use o comando: " gcc euler-serial-nogmp.c -o opt-serial-nogmp" e em seguida abra o arquivo executável "euler-serial" usando:
+Para compilar e executar o programa serial certifique-se que o gcc está instalado em sua máquina e então use o comando: " gcc euler-serial-nogmp.c -o opt-serial-nogmp" e em seguida abra o arquivo executável "opt-serial-nogmp" usando:
 
  ```
 time ./opt-serial-nogmp
@@ -35,5 +35,5 @@ real    0m0.001s
 user    0m0.001s
 sys     0m0.000s
   ```
- **Note que quando não usamos nenhuma biblioteca para trabalho com aritmética de precisão arbitrária não conseguimos muita precisão após 18 digitos das casas decimais.
+ **Note que quando não usamos nenhuma biblioteca para trabalho com aritmética de precisão arbitrária não conseguimos muita precisão após 18 digitos das casas decimais.**
 
