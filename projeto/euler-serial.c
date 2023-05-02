@@ -17,12 +17,12 @@ void euler(mpf_t result, int n) {
 }
 
 int main() {
-    mpf_set_default_prec(80000U);
+    mpf_set_default_prec(33220U);
     mpf_t e;
     mpf_init(e);
     mpf_set_ui(e, 1);
-    euler(e, 10000);
-    gmp_printf("Euler: %.9999Ff\n", e);
+    euler(e, 3250);
+    gmp_printf("%.9999Ff\n", e);
     mpf_clear(e);
     return 0;
 }
