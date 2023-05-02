@@ -1,5 +1,10 @@
 # Projeto
 
+Para executar os programas, é preciso ter a biblioteca GMP instalado na máquina:
+```
+sudo apt-get install libgmp3-dev
+```
+
 ### Euler serial
 Para compilar e executar o programa serial certifique-se que o gcc está instalado em sua máquina e então use o comando: "gcc -o opt-serial euler-serial.c -lgmp" e em seguida abra o arquivo executável "euler-serial" usando:
 
