@@ -30,6 +30,7 @@ void euler(int n, mpf_t *e){
  	}
 
 #pragma omp critical
+
   	mpf_add(*e, *e, e_sum);
 
   	mpf_clear(e_sum);
@@ -40,7 +41,7 @@ void euler(int n, mpf_t *e){
 
 
 int main(int argc , char* argv[]) {
-	if (argc < 2) {;
+	if (argc < 2) {
     		return 1;
   	}
 
