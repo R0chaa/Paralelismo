@@ -11,8 +11,8 @@ void euler(int n, mpf_t *e){
 	long double mult = 1;
 
   	mpf_t result, e_local;
-  	mpf_init2(result, 335000U);
-  	mpf_init2(e_local, 335000U);
+  	mpf_init2(result, 33500U);
+  	mpf_init2(e_local, 33500U);
 
   	mpf_set_ui(result, 1);
 	local_n = n/thread_count;
@@ -40,14 +40,14 @@ int main(int argc , char* argv[]) {
 		return 1;
 	}
 	int thread_count = strtol(argv[1], NULL, 10);
-  	int n = 130000; //33220 mto rapido pra 10k digitos
+  	int n = 33200; //130000
   	mpf_t e;
-  	mpf_init2(e, 335000U);
+  	mpf_init2(e, 33500U);
 	mpf_set_ui(e, 1);
 
 #pragma omp parallel num_threads(thread_count)
 	euler(n, &e);
-  	gmp_printf("%.99999Ff\n", e);
+  	gmp_printf("%.9999Ff\n", e);
   	mpf_clear(e);
 
   	return 0;
