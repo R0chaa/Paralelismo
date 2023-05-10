@@ -4,11 +4,9 @@
 #include <omp.h>
 
 void euler(int n, mpf_t *e){
-
 	int i, local_n;
   	int my_rank = omp_get_thread_num();
   	int thread_count = omp_get_num_threads();
-	long double mult = 1;
 
   	mpf_t result, e_local;
   	mpf_init2(result, 33500U);
@@ -34,7 +32,6 @@ void euler(int n, mpf_t *e){
 
 
 int main(int argc , char* argv[]) {
-
 	if (argc < 2){
 		printf("Informe o numero de threads.");
 		return 1;
