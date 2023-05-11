@@ -4,12 +4,9 @@
 ```
 ### 2. Qual é o limite inferior do tempo de execução paralela para cada decomposição?
 
-Assumindo que tempoSerial é proporcional a n, o limite inferior do tempo de execução paralela pode ser aproximado como: tempoParalelo = tempoSerial / P + tempoOverhead.
+É possível escrever uma fórmula no modelo work-span para deduzir um limite inferior em Tp:
 ```
-Sendo:
-tempoSerial -> tempo levado para a versão serial do algoritmo
-P -> número de processadores 
-tempoOverhead -> tempo de overhead associado à paralelização do algoritmo
+Tp = tempo serial / numero de processadors => 0.231/2 = 0.1155
 ```
 ### 3. Quantos processadores são necessários para se conseguir o tempo mínimo de execução?
 
@@ -18,6 +15,6 @@ No entanto, o número máximo de processadores que podem ser usados é limitado 
 
 ### 4. Qual é o grau máximo de concorrência?
 O grau máximo de concorrência é igual ao valor de thread_count (número de threads usadas na região paralela).
+
 ### 5. Qual é o paralelismo médio?
-O paralelismo médio é igual à razão entre o tempo de execução paralela e o tempo de execução serial. 
-Assumindo que tempoSerial é proporcional a n, o paralelismo médio pode ser aproximado como: tempoSerial / (n / P + tempoOverhead)
+O paralelismo médio é igual à razão entre o tempo de execução paralela e o tempo de execução serial (tempo serial/ tempo paralelo), sendo igual a: 4.0526.
