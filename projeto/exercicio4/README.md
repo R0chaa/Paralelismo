@@ -1,6 +1,36 @@
 # Exercício 04 - Decomposição de tarefas
 ### 1. Quais são as tarefas no caminho crítico para cada grafo de dependência? Para responder a pergunta, apresente um DAG do seu projeto.
+
+![dagdafe](https://github.com/R0chaa/Paralelismo/assets/73042947/95cff0b5-0588-4767-890f-f99fcbb449cc)
+
 ```
+1. Inicialização de variáveis
+- Tarefa única
+- Executa sequencialmente
+
+2. Divisão do trabalho entre as threads
+- Tarefa única
+- Executa sequencialmente
+
+3. Cálculo parcial da soma local
+- Executada por cada thread
+- Execução concorrente
+
+4. Cálculo parcial do resultado inverso
+- Executada por cada thread
+- Execução concorrente
+
+5. Cálculo da soma total
+- Tarefa única
+- Executa sequencialmente após a conclusão das tarefas 3 e 4
+
+6. Cálculo do resultado final
+- Tarefa única
+- Executa sequencialmente após a conclusão da tarefa 5
+
+7. Impressão do resultado final
+- Tarefa única
+- Executa sequencialmente após a conclusão da tarefa 6
 ```
 ### 2. Qual é o limite inferior do tempo de execução paralela para cada decomposição?
 É possível escrever uma fórmula no modelo work-span para deduzir um limite inferior em Tp:
