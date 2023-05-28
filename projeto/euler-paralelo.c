@@ -8,19 +8,21 @@ void euler(int n, mpf_t *e){
   	int my_rank = omp_get_thread_num();
   	int thread_count = omp_get_num_threads();
 
-  	mpf_t result, e_local;
+  	mpf_t result, e_local, fact;
   	mpf_init2(result, 33500U);
   	mpf_init2(e_local, 33500U);
+	mpf_init2(fact, 33500U);
 
-  	mpf_set_ui(result, 1);
+  	mpf_set_ui(fact, 1);
 	local_n = n/thread_count;
 
 	for(i = 1; i <= local_n; i++){
 		if(i > local_n*my_rank){
-			mpf_div_ui(result, result, i);
+			mpf_mul_ui(fact,fact,i);
+			mpf_ui_div(result, 1, fact);
 			mpf_add(e_local, e_local, result);
 		} else {
-			mpf_div_ui(result, result, i);
+			mpf_mul_ui(fact, fact, i);
 		}
 	}
 
@@ -28,6 +30,7 @@ void euler(int n, mpf_t *e){
   	mpf_add(*e, *e, e_local);
   	mpf_clear(e_local);
   	mpf_clear(result);
+	mpf_clear(fact);
 }
 
 
