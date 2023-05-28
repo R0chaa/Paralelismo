@@ -51,7 +51,7 @@ No entanto, o número máximo de processadores que podem ser usados é limitado 
 O grau máximo de concorrência é igual ao valor de thread_count (número de threads usadas na região paralela).
 
 ### 5. Qual é o paralelismo médio?
-O grau médio de concorrência pode ser cálculado divindo o a quantidade de todos os nós pelo limite inferior do tempo de execução paralela para cada decomposição.
+O grau médio de concorrência pode ser cálculado dividindo a quantidade de todos os nós pelo limite inferior do tempo de execução paralela para cada decomposição.
 ```
 Paralelismo médio = 7/4 => 1.75
 ```
